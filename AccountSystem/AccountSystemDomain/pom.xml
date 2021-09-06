@@ -10,9 +10,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>za.co.nuw.accountsystem</groupId>
     <artifactId>AccountSystemDomain</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     
 </project>

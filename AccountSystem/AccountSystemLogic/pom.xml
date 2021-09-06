@@ -10,7 +10,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>za.co.nuw.accountsystem</groupId>
+
     <artifactId>AccountSystemLogic</artifactId>
     <version>1.0-SNAPSHOT</version>
 
