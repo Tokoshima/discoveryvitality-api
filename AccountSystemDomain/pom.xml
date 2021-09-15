@@ -5,14 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>za.co.nuw.accountsystem</groupId>
+        <groupId>za.ac.nwu.accountsystem</groupId>
         <artifactId>AccountSystem</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>za.co.nuw.accountsystem</groupId>
-    <artifactId>AccountSystemTranslator</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>AccountSystemDomain</artifactId>
+    <packaging>jar</packaging>
+
 
     
 </project>
