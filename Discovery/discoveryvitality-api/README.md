@@ -1,1 +1,0 @@
-# discoveryvitality-api
