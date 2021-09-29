@@ -11,7 +11,20 @@
     </parent>
 
     <artifactId>AccountSystemLogic</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>za.ac.nwu.accountsystem</groupId>
+            <artifactId>AccountSystemDomain</artifactId>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>za.ac.nwu.accountsystem</groupId>
+            <artifactId>AccountSystemTranslator</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 
-    
 </project>

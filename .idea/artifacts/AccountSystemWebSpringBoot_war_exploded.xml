@@ -19,9 +19,44 @@
             <element id="module-output" name="AccountSystemDomain" />
           </element>
           <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.8" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
           <element id="archive" name="AccountSystemLogic-1.0-SNAPSHOT.jar">
             <element id="module-output" name="AccountSystemLogic" />
           </element>
+          <element id="archive" name="AccountSystemTranslator-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="AccountSystemTranslator" />
+          </element>
+          <element id="archive" name="AccountSystemRepository-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="AccountSystemRepository" />
+          </element>
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-data-jpa:2.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-aop:2.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.9.4" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:2.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: com.zaxxer:HikariCP:3.2.0" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.1.8.RELEASE" />
+          <element id="library" level="project" name="Maven: javax.transaction:javax.transaction-api:1.3" />
+          <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.3.1" />
+          <element id="library" level="project" name="Maven: javax.activation:javax.activation-api:1.2.0" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.3.10.Final" />
+          <element id="library" level="project" name="Maven: javax.persistence:javax.persistence-api:2.2" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.23.2-GA" />
+          <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
+          <element id="library" level="project" name="Maven: org.jboss:jandex:2.0.5.Final" />
+          <element id="library" level="project" name="Maven: org.dom4j:dom4j:2.1.1" />
+          <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:5.0.4.Final" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:2.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:2.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-orm:5.1.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.1.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aspects:5.1.8.RELEASE" />
+          <element id="library" level="project" name="Maven: com.oracle.database.jdbc:ojdbc8:19.3.0.0" />
+          <element id="library" level="project" name="Maven: com.oracle.database.jdbc:ucp:19.3.0.0" />
+          <element id="library" level="project" name="Maven: com.oracle.database.security:oraclepki:19.3.0.0" />
+          <element id="library" level="project" name="Maven: com.oracle.database.security:osdt_cert:19.3.0.0" />
+          <element id="library" level="project" name="Maven: com.oracle.database.security:osdt_core:19.3.0.0" />
+          <element id="library" level="project" name="Maven: com.oracle.database.ha:simplefan:19.3.0.0" />
+          <element id="library" level="project" name="Maven: com.oracle.database.ha:ons:19.3.0.0" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:2.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter:2.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:2.1.6.RELEASE" />
@@ -58,7 +93,6 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.1.8.RELEASE" />
           <element id="library" level="project" name="Maven: io.springfox:springfox-swagger2:2.9.2" />
           <element id="library" level="project" name="Maven: io.swagger:swagger-models:1.5.20" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
           <element id="library" level="project" name="Maven: io.springfox:springfox-spi:2.9.2" />
           <element id="library" level="project" name="Maven: io.springfox:springfox-core:2.9.2" />
           <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy:1.9.13" />
