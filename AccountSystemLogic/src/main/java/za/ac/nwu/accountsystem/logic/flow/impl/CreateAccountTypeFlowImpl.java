@@ -2,8 +2,8 @@ package za.ac.nwu.accountsystem.logic.flow.impl;
 
 
 import org.springframework.stereotype.Component;
-import za.ac.nwu.accountsystem.dto.AccountTypeDto;
 import za.ac.nwu.accountsystem.logic.flow.CreateAccountTypeFlow;
+import za.ac.nwu.accountsystem.domain.dto.AccountTypeDto;
 import za.ac.nwu.accountsystem.translator.AccountTypeTranslator;
 
 import javax.transaction.Transactional;
@@ -19,11 +19,13 @@ public class CreateAccountTypeFlowImpl implements CreateAccountTypeFlow {
         this.accountTypeTranslator = accountTypeTranslator;
     }
 
+
     @Override
-    public AccountTypeDto create(AccountTypeDto accountType){
+    public AccountTypeDto create(AccountTypeDto accountType) {
         if (null == accountType.getCreationDate()){
             accountType.setCreationDate(LocalDate.now());
         }
-        return  accountTypeTranslator.create(accountType);
+        return accountTypeTranslator.create(accountType);
     }
+
 }

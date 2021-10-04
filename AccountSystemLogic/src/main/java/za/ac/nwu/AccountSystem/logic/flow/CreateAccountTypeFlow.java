@@ -1,7 +1,6 @@
-package za.ac.nwu.AccountSystem.logic.flow;
+package za.ac.nwu.accountsystem.logic.flow;
 
-import za.ac.nwu.AccountSystem.domain.dto.AccountTypeDto;
-import za.ac.nwu.AccountSystem.domain.persistence.AccountType;
+import za.ac.nwu.accountsystem.domain.dto.AccountTypeDto;
 
 public interface CreateAccountTypeFlow {
     AccountTypeDto create(AccountTypeDto accountType);
