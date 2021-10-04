@@ -1,5 +1,5 @@
-za/ac/nwu/accountsystem/persistence/AccountTransaction.class
-za/ac/nwu/accountsystem/service/GeneralResponse.class
-za/ac/nwu/accountsystem/dto/AccountTransactionDto.class
-za/ac/nwu/accountsystem/dto/AccountTypeDto.class
-za/ac/nwu/accountsystem/persistence/AccountType.class
+za\ac\nwu\accountsystem\domain\persistence\AccountType.class
+za\ac\nwu\accountsystem\domain\dto\AccountTransactionDto.class
+za\ac\nwu\accountsystem\domain\service\GeneralResponse.class
+za\ac\nwu\accountsystem\domain\dto\AccountTypeDto.class
+za\ac\nwu\accountsystem\domain\persistence\AccountTransaction.class

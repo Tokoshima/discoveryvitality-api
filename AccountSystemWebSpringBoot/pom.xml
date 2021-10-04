@@ -19,13 +19,13 @@
         <dependency>
             <groupId>za.ac.nwu.accountsystem</groupId>
             <artifactId>AccountSystemDomain</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>za.ac.nwu.accountsystem</groupId>
             <artifactId>AccountSystemLogic</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>

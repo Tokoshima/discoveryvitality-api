@@ -2,8 +2,8 @@ package za.ac.nwu.accountsystem.translator.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import za.ac.nwu.accountsystem.dto.AccountTypeDto;
-import za.ac.nwu.accountsystem.persistence.AccountType;
+import za.ac.nwu.accountsystem.domain.persistence.AccountType;
+import za.ac.nwu.accountsystem.domain.dto.AccountTypeDto;
 import za.ac.nwu.accountsystem.repo.persistence.AccountTypeRepository;
 import za.ac.nwu.accountsystem.translator.AccountTypeTranslator;
 
@@ -40,5 +40,23 @@ public class AccountTypeTranslatorImpl implements AccountTypeTranslator {
         return new AccountTypeDto(accountType);
 
     }
+
+    @Override
+    public AccountTypeDto getAccountTypeByMnemonic(String mnemonic){
+
+        AccountType accountType = accountTypeRepository.getAccountTypeMnemonicNativeQuery(mnemonic);
+        return new AccountTypeDto(accountType);
+    }
+    @Override
+    public AccountTypeDto getAccountTypeByMnemonicNativeQuery(String mnemonic){
+
+        AccountType accountType = accountTypeRepository.getAccountTypeMnemonicNativeQuery(mnemonic);
+        return new AccountTypeDto(accountType);
+    }
+//    @Override
+//    public AccountTypeDto getAccountTypeDtoByMnemonic(String mnemonic){
+//
+//        return accountTypeRepository.getAccountTypeDtoByMnemonic(mnemonic);
+//    }
 
 }
