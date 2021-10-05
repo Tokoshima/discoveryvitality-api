@@ -1,5 +1,7 @@
 package za.ac.nwu.accountsystem.domain.persistence;
 
+import za.ac.nwu.accountsystem.domain.dto.AccountTypeDto;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -7,7 +9,7 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name = "ACCOUNT_TYPE", schema = "LOUW")
+@Table(name = "ACCOUNT_TYPE", schema = "ALP")
 public class AccountType implements Serializable {
 
 
@@ -15,29 +17,33 @@ public class AccountType implements Serializable {
     private Long accountTypeId;
     private String mnemonic;
     private String accountTypeName;
+    private Long totalMiles;
     private LocalDate creationDate;
 
     private Set<AccountTransaction> accountTransactions;
 
 
-    public AccountType(Long accountTypeId, String mnemonic, String accountTypeName, LocalDate creationDate) {
+    public AccountType(Long accountTypeId, String mnemonic, String accountTypeName,Long totalMiles, LocalDate creationDate) {
         this.accountTypeId = accountTypeId;
         this.mnemonic = mnemonic;
         this.accountTypeName = accountTypeName;
+        this.totalMiles = totalMiles;
         this.creationDate = creationDate;
     }
 
-    public AccountType(String mnemonic, String accountTypeName, LocalDate creationDate) {
+    public AccountType(String mnemonic, String accountTypeName,Long totalMiles, LocalDate creationDate) {
         this.mnemonic = mnemonic;
         this.accountTypeName = accountTypeName;
+        this.totalMiles = totalMiles;
         this.creationDate = creationDate;
     }
 
+    
     public AccountType() {
     }
 
     @Id
-    @SequenceGenerator(name = "ACCOUNT_TYPE_SEQ1", sequenceName = "LOUW.ACCOUNT_TYPE_SEQ1", allocationSize = 1)
+    @SequenceGenerator(name = "ACCOUNT_TYPE_SEQ1", sequenceName = "ACCOUNT.ACCOUNT_TYPE_SEQ1", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ACCOUNT_TYPE_SEQ1")
 
     @Column(name = "ACCOUNT_TYPE_ID")
@@ -67,6 +73,15 @@ public class AccountType implements Serializable {
         this.accountTypeName = accountTypeName;
     }
 
+    @Column(name = "AMOUNT_TOTAL")
+    public Long getTotalMiles() {
+        return totalMiles;
+    }
+
+    public void setTotalMiles(Long totalMiles) {
+        this.totalMiles = totalMiles;
+    }
+
     @Column(name = "CREATION_DATE")
     public LocalDate getCreationDate() {
         return creationDate;
@@ -76,7 +91,7 @@ public class AccountType implements Serializable {
         this.creationDate = creationDate;
     }
 
-    @OneToMany(targetEntity = AccountTransaction.class, fetch = FetchType.LAZY, mappedBy = "accountType", orphanRemoval = true, cascade = CascadeType.PERSIST)
+    @OneToMany(targetEntity = AccountTransaction.class, fetch = FetchType.LAZY, mappedBy = "accountType")
     public Set<AccountTransaction> getAccountTransactions(){
         return accountTransactions;
     }
@@ -90,12 +105,12 @@ public class AccountType implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AccountType that = (AccountType) o;
-        return Objects.equals(accountTypeId, that.accountTypeId) && Objects.equals(mnemonic, that.mnemonic) && Objects.equals(accountTypeName, that.accountTypeName) && Objects.equals(creationDate, that.creationDate);
+        return Objects.equals(accountTypeId, that.accountTypeId) && Objects.equals(mnemonic, that.mnemonic) && Objects.equals(accountTypeName, that.accountTypeName) && Objects.equals(totalMiles, that.totalMiles) && Objects.equals(creationDate, that.creationDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(accountTypeId, mnemonic, accountTypeName, creationDate);
+        return Objects.hash(accountTypeId, mnemonic, accountTypeName,totalMiles ,creationDate);
     }
 
     @Override
@@ -104,6 +119,7 @@ public class AccountType implements Serializable {
                 "accountTypeId=" + accountTypeId +
                 ", mnemonic='" + mnemonic + '\'' +
                 ", accountTypeName='" + accountTypeName + '\'' +
+                ", totalMiles='" + totalMiles + '\'' +
                 ", creationDate=" + creationDate +
                 '}';
     }

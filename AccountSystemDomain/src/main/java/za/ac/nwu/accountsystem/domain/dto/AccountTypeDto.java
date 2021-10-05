@@ -14,24 +14,27 @@ import java.util.Objects;
 public class AccountTypeDto implements Serializable {
 
 
-
+    private static final long serialVersionUID = 8946863509858032110L;
     private String mnemonic;
     private String accountTypeName;
+    private Long totalMiles;
     private LocalDate creationDate;
 
 //    private Set<AccountTransaction> accountTransactions;
 
 
-    public AccountTypeDto( String mnemonic, String accountTypeName, LocalDate creationDate) {
+    public AccountTypeDto( String mnemonic, String accountTypeName, Long totalMiles,LocalDate creationDate) {
 
         this.mnemonic = mnemonic;
         this.accountTypeName = accountTypeName;
+        this.totalMiles = totalMiles;
         this.creationDate = creationDate;
     }
 
     public AccountTypeDto(AccountType accountType) {
         this.setMnemonic(accountType.getMnemonic());
         this.setAccountTypeName(accountType.getAccountTypeName());
+        this.setTotalMiles(accountType.getTotalMiles());
         this.setCreationDate(accountType.getCreationDate());
     }
 
@@ -70,6 +73,22 @@ public class AccountTypeDto implements Serializable {
     }
 
     @ApiModelProperty(position = 3,
+            value = "AccountType Total Miles",
+            name = "TotalMiles",
+            notes = "The amount of miles the account holder has",
+            dataType = "Long",
+            example = "500",
+            allowEmptyValue = false,
+            required = true)
+    public Long getTotalMiles() {
+        return totalMiles;
+    }
+
+    public void setTotalMiles(Long totalMiles) {
+        this.totalMiles = totalMiles;
+    }
+
+    @ApiModelProperty(position = 4,
             value = "AccountType Creation Date",
             name = "CreationDate",
             notes = "This is the date on which the AccountType was created",
@@ -96,14 +115,14 @@ public class AccountTypeDto implements Serializable {
 
     @JsonIgnore
     public AccountType getAccountType(){
-        return new AccountType(getMnemonic(),getAccountTypeName(), getCreationDate());
+        return new AccountType(getMnemonic(),getAccountTypeName(), getTotalMiles() ,getCreationDate());
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        AccountType that = (AccountType) o;
+        AccountTypeDto that = (AccountTypeDto) o;
         return Objects.equals(mnemonic, that.getMnemonic()) && Objects.equals(accountTypeName, that.getAccountTypeName()) && Objects.equals(creationDate, that.getCreationDate());
     }
 
