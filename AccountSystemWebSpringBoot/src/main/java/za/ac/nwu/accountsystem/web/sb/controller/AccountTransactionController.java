@@ -44,6 +44,7 @@ public class AccountTransactionController {
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
+
     @GetMapping("/all")
     @ApiOperation(value = "Gets all the configured Account types.", notes = "Returns a list of account types")
     @ApiResponses(value = {

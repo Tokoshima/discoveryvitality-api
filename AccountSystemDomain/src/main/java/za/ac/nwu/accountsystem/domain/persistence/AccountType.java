@@ -43,8 +43,8 @@ public class AccountType implements Serializable {
     }
 
     @Id
-    @SequenceGenerator(name = "ACCOUNT_TYPE_SEQ1", sequenceName = "ACCOUNT.ACCOUNT_TYPE_SEQ1", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ACCOUNT_TYPE_SEQ1")
+    @SequenceGenerator(name = "ACCOUNT_TYPE_SEQ", sequenceName = "ALP.ACCOUNT_TYPE_SEQ", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ACCOUNT_TYPE_SEQ")
 
     @Column(name = "ACCOUNT_TYPE_ID")
     public Long getAccountTypeId() {

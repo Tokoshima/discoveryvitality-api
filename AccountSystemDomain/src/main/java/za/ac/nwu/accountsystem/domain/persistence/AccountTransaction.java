@@ -28,9 +28,9 @@ public class AccountTransaction implements Serializable {
     }
 
     @Id
-    @SequenceGenerator(name = "ACCOUNT_TRANSACTION_SEQ", sequenceName = "ACCOUNT.ACCOUNT_TRANSACTION_SEQ", allocationSize = 1)
+    @SequenceGenerator(name = "ACCOUNT_TRANSACTION_SEQ", sequenceName = "ALP.ACCOUNT_TRANSACTION_SEQ", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ACCOUNT_TRANSACTION_SEQ")
-    @Column(name = "TX_ID")
+    @Column(name = "ACCOUNT_TRANS_ID")
     public Long getTransactionId() {
         return transactionId;
     }
@@ -67,7 +67,7 @@ public class AccountTransaction implements Serializable {
         this.amount = amount;
     }
 
-    @Column(name = "TX_DATE")
+    @Column(name = "TRANSACTION_DATE")
     public LocalDate getTransactionDate() {
         return transactionDate;
     }
