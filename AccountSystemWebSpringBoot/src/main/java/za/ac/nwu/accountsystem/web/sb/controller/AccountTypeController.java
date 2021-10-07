@@ -47,8 +47,7 @@ public class AccountTypeController {
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "The AccountType was created successfully", response = GeneralResponse.class),
             @ApiResponse(code = 400, message = "Bad Request", response = GeneralResponse.class),
-            @ApiResponse(code = 500, message = "Internal Server Error", response = GeneralResponse.class)
-    })
+            @ApiResponse(code = 500, message = "Internal Server Error", response = GeneralResponse.class)})
     public ResponseEntity<GeneralResponse<AccountTypeDto>> create(
             @ApiParam(value = "Request body to create a new AccountType.", required = true)
             @RequestBody AccountTypeDto accountType){
