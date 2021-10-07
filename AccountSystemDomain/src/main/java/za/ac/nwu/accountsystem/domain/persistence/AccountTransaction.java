@@ -10,11 +10,11 @@ import java.util.Objects;
 public class AccountTransaction implements Serializable {
 
     private static final long serialVersionUID = 2172615573575963076L;
-    private Long transactionId;
+    private Long transactionId;//g
     private AccountType accountType;
-    private Long memberId;
+    private Long memberId;//g
     private Long amount;
-    private LocalDate transactionDate;
+    private LocalDate transactionDate;//g
 
     public AccountTransaction() {
     }

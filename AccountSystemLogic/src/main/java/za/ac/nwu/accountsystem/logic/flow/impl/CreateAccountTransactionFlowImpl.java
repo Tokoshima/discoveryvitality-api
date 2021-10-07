@@ -29,6 +29,9 @@ public class CreateAccountTransactionFlowImpl implements CreateAccountTransactio
 
         AccountTransaction createdAccountTransaction = accountTransactionTranslator.save(accountTransaction);
 
+//        AccountTransaction AccountTypeAmount = accountTransactionTranslator.UpdateAccountTypeAmount(createdAccountTransaction.getAmount(),accountTransactionDto.getAccountTypeMnemonic());
+
+
         return new AccountTransactionDto(createdAccountTransaction);
     }
     //TODO

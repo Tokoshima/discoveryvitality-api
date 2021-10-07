@@ -1,7 +1,9 @@
 package za.ac.nwu.accountsystem.translator.impl;
 
 import org.springframework.stereotype.Component;
+import za.ac.nwu.accountsystem.domain.dto.AccountTransactionDto;
 import za.ac.nwu.accountsystem.domain.persistence.AccountTransaction;
+import za.ac.nwu.accountsystem.domain.persistence.AccountType;
 import za.ac.nwu.accountsystem.repo.persistence.AccountTransactionRepository;
 import za.ac.nwu.accountsystem.translator.AccountTransactionTranslator;
 
@@ -16,7 +18,6 @@ public class AccountTransactionTranslatorImpl implements AccountTransactionTrans
     public AccountTransactionTranslatorImpl(AccountTransactionRepository accountTransactionRepository){
         this.repo = accountTransactionRepository;
     }
-
 
     @Override
     public AccountTransaction save(AccountTransaction accountTransaction) {
@@ -39,6 +40,19 @@ public class AccountTransactionTranslatorImpl implements AccountTransactionTrans
         //TODO EXCEPTIONS
 
         return repo.findById(transactionId).orElse(null);
+    }
+
+    @Override
+    public AccountTransaction UpdateAccountTypeAmount(Long amount, String mnemonic) {
+            return null;
+//        return repo.updateAccountTypeFromTransactionEvent(amount, mnemonic);
+
+
+
+//        Customer customerToUpdate = customerRepository.getOne(id);
+//        customerToUpdate.setName(customerDto.getName);
+//        customerRepository.save(customerToUpdate);
+
     }
 
 
