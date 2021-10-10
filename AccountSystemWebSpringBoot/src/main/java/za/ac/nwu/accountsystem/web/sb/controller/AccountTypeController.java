@@ -29,6 +29,8 @@ public class AccountTypeController {
         this.createAccountTypeFlow = createAccountTypeFlow;
     }
 
+
+    //GETSET
     @GetMapping("/all")
     @ApiOperation(value = "Gets all the configured Account Types", notes = "Returns a list of account Types")
     @ApiResponses(value = {

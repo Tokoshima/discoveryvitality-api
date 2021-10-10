@@ -7,7 +7,10 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
+
 public class AccountTransactionDto implements Serializable {
+
+
 
 
     private static final long serialVersionUID = -3656296961313947165L;

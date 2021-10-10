@@ -13,5 +13,5 @@ public interface AccountTransactionTranslator {
 
     AccountTransaction getAccountTransactionByPk(Long transactionId);
 
-    AccountTransaction UpdateAccountTypeAmount(Long amount, String mnemonic);
+//    AccountTransaction UpdateAccountTypeAmount(Long amount, String mnemonic);
 }
