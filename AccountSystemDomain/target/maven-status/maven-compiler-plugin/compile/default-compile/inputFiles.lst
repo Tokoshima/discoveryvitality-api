@@ -1,5 +1,6 @@
 C:\Users\louws\Desktop\Louw\AccountSystem\AccountSystemDomain\src\main\java\za\ac\nwu\accountsystem\domain\dto\AccountTypeDto.java
 C:\Users\louws\Desktop\Louw\AccountSystem\AccountSystemDomain\src\main\java\za\ac\nwu\accountsystem\domain\dto\AccountTransactionDto.java
+C:\Users\louws\Desktop\Louw\AccountSystem\AccountSystemDomain\src\main\java\za\ac\nwu\accountsystem\domain\exception\PersistenceReadException.java
 C:\Users\louws\Desktop\Louw\AccountSystem\AccountSystemDomain\src\main\java\za\ac\nwu\accountsystem\domain\service\GeneralResponse.java
 C:\Users\louws\Desktop\Louw\AccountSystem\AccountSystemDomain\src\main\java\za\ac\nwu\accountsystem\domain\persistence\AccountTransaction.java
 C:\Users\louws\Desktop\Louw\AccountSystem\AccountSystemDomain\src\main\java\za\ac\nwu\accountsystem\domain\persistence\AccountType.java

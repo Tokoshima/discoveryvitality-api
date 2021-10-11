@@ -17,12 +17,12 @@ public interface AccountTransactionRepository extends JpaRepository<AccountTrans
 
 
 
-    @Query(value = " UPDATE" +
-            "ACCOUNT_TYPE"+
-            "SET"+
-            "AMOUNT_TOTAL = :amount"+
-            "WHERE MNEMONIC = :mnemonic")
-    AccountTransaction updateAccountTypeFromTransactionEvent(Long amount, String mnemonic);
+//    @Query(value = " UPDATE" +
+//            "ACCOUNT_TYPE"+
+//            "SET"+
+//            "AMOUNT_TOTAL = :amount"+
+//            "WHERE MNEMONIC = :mnemonic")
+//    AccountTransaction updateAccountTypeFromTransactionEvent(Long amount, String mnemonic);
 //    UPDATE
 //            parts
 //    SET

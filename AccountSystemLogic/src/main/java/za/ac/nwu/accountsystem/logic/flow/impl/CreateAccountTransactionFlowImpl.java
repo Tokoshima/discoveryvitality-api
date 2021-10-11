@@ -2,6 +2,7 @@ package za.ac.nwu.accountsystem.logic.flow.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import za.ac.nwu.accountsystem.domain.dto.AccountTransactionDto;
 import za.ac.nwu.accountsystem.domain.dto.AccountTypeDto;
@@ -21,6 +22,7 @@ public class CreateAccountTransactionFlowImpl implements CreateAccountTransactio
 
     private final AccountTransactionTranslator accountTransactionTranslator;
     private final FetchAccountTypeFlow fetchAccountTypeFlow;
+
 
     public CreateAccountTransactionFlowImpl(AccountTransactionTranslator accountTransactionTranslator,
                                             FetchAccountTypeFlow fetchAccountTypeFlow){
